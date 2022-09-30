@@ -15,10 +15,12 @@ public class Function {
      */
     @Funq
     public Output function(Input input) {
-       Map<String, String> greetings = Map.of(
-                       "english", "Welcome",
-                       "spanish", "Bienvenido",
-                       "italian", "Benvenuto");
+        Map<String, String> greetings = Map.of(
+            "english", "Welcome",
+            "spanish", "Bienvenido",
+            "italian", "Benvenuto",
+            "portuguese", "Bem-Vindo",
+            "czech", "Vítejte");
     
        String lang = Optional.ofNullable(input.getLanguage()).orElse("english");
        String greeting = greetings.getOrDefault(lang, "");
