@@ -1,12 +1,14 @@
 specVersion: 0.25.0
 name: hello-quarkus
-namespace: ""
+namespace: test-jeramos
 runtime: quarkus
-registry: ""
-image: ""
+registry: image-registry.openshift-image-registry.svc:5000/test-jeramos
+image: image-registry.openshift-image-registry.svc:5000/test-jeramos/hello-quarkus:latest
 imageDigest: ""
+git:
+  url: https://github.com/jrangelramos/hello-quarkus.git
 buildpacks: []
-builder: ""
+builder: s2i
 volumes: []
 buildEnvs:
 - name: BP_NATIVE_IMAGE
